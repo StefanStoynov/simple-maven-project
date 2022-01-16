@@ -1,4 +1,4 @@
-package com.ss;
+package com.ss.jee;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,11 +6,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
-    private UserValidationService userValidationService = new UserValidationService();
+    private LoginService loginService = new LoginService();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //redirecting to JSP
@@ -22,7 +21,7 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        boolean isUserValid = userValidationService.isUserValid(username, password);
+        boolean isUserValid = loginService.isUserValid(username, password);
         if (isUserValid) {
             request.setAttribute("username", username);
             request.setAttribute("password", password);
