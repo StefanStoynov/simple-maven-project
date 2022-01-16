@@ -38,3 +38,6 @@ http://localhost:8080/spring-mvc/login
 but Resolver will change it to
 http://localhost:8080/spring-mvc/WEB-INF/views/login.jsp
 login.jsp -> View
+
+In Spring MVC parameters from request are past to the Views with ModelMap, which is a
+parameter of POST method of LoginController
