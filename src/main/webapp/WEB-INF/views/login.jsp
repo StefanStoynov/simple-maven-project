@@ -21,6 +21,6 @@
     Current date is <%=date%>
 </div>
 <%--get the attribute value with name paramName--%>
-  My first JSP ${paramName}
+  My username is ${username} and my password is ${password}
 </body>
 </html>
