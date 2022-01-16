@@ -12,6 +12,11 @@ import java.io.PrintWriter;
 public class LoginServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // url: http://localhost:8080/?paramName=Stefan
+        //get request parameter value
+        String requestParamValue = request.getParameter("paramName");
+        //how to pass the value to the JSP - use attributes
+        request.setAttribute("paramName", requestParamValue);
         //redirecting to JSP
         //Example: request.getRequestDispatcher("Where my JSP is").forward(request, response);
         request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);

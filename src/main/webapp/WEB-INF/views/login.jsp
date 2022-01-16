@@ -11,6 +11,7 @@
     <title>Yahoo from JSP</title>
 </head>
 <body>
-  My first JSP
+<%--get the attribute value with name paramName--%>
+  My first JSP ${paramName}
 </body>
 </html>
