@@ -13,8 +13,9 @@
 <body>
 <%--who will handle the form is in action attribute--%>
 <form action="/login.do" method="post">
+<p><font color="red">${errorMessage}</font></p>
 <%--    input type="text" what will be the name ="username"--%>
-Enter your username <input type="text" name="username"/> <input type="submit" value="Login">
+Enter your username <input type="text" name="username"/> password <input type="password" name="password"/> <input type="submit" value="Login">
 </form>
 </body>
 </html>
